@@ -1,4 +1,4 @@
-package com.example.reincarnatedasadog
+package com.example.reincarnatedasadog.ui.viewmodel
 
 import androidx.lifecycle.ViewModel
 
