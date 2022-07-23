@@ -1,3 +1,46 @@
 <resources>
     <string name="app_name">Reincarnated As A Dog</string>
+
+    <!-- Temperament traits-->
+    <string name="sanguine_leadership">Leadership</string>
+    <string name="sanguine_carefree">Carefree</string>
+    <string name="sanguine_lively">Lively</string>
+    <string name="sanguine_easygoing">Easygoing</string>
+    <string name="sanguine_responsive">Responsive</string>
+    <string name="sanguine_talkative">Talkative</string>
+    <string name="sanguine_outgoing">Outgoing</string>
+    <string name="sanguine_sociable">Sociable</string>
+
+    <string name="choleric_active">Active</string>
+    <string name="choleric_optimistic">Optimistic</string>
+    <string name="choleric_impulsive">Impulsive</string>
+    <string name="choleric_changeable">Changeable</string>
+    <string name="choleric_excitable">Excitable</string>
+    <string name="choleric_aggressive">Aggressive</string>
+    <string name="choleric_restless">Restless</string>
+    <string name="choleric_touchy">Touchy</string>
+
+    <string name="phlegmatic_calm">Calm</string>
+    <string name="phlegmatic_even_tempered">Even-tempered</string>
+    <string name="phlegmatic_reliable">Reliable</string>
+    <string name="phlegmatic_controlled">Controlled</string>
+    <string name="phlegmatic_peaceful">Peaceful</string>
+    <string name="phlegmatic_thoughtful">Thoughtful</string>
+    <string name="phlegmatic_careful">Careful</string>
+    <string name="phlegmatic_passive">Passive</string>
+
+    <string name="melancholic_quiet">Quiet</string>
+    <string name="melancholic_Unsociable">Unsociable</string>
+    <string name="melancholic_reserved">Reserved</string>
+    <string name="melancholic_pessimistic">Pessimistic</string>
+    <string name="melancholic_sober">Sober</string>
+    <string name="melancholic_rigid">Rigid</string>
+    <string name="melancholic_anxious">Anxious</string>
+    <string name="melancholic_moody">Moody</string>
+
+    <!-- group labels -->
+    <string name="sanguine_group_label">Sanguine</string>
+    <string name="choleric_group_label">Choleric</string>
+    <string name="phlegmatic_group_label">Phlegmatic</string>
+    <string name="melancholic_group_label">Melancholic</string>
 </resources>
