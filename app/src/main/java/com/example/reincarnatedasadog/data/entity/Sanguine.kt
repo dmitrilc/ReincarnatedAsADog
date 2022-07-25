@@ -1,11 +1,20 @@
 package com.example.reincarnatedasadog.data.entity
 
 import androidx.room.Entity
+import androidx.room.ForeignKey
 import androidx.room.PrimaryKey
 
-@Entity
+@Entity(
+    foreignKeys = [
+        ForeignKey(
+            entity = Breed::class,
+            parentColumns = ["breedId"],
+            childColumns = ["sanguineId"]
+        )
+    ]
+)
 data class Sanguine(
-    @PrimaryKey(autoGenerate = true) val sanguineId: Int,
+    @PrimaryKey(autoGenerate = true) val sanguineId: Int = 0,
     val isLeader: Boolean = false,
     val isCarefree: Boolean = false,
     val isLively: Boolean = false,

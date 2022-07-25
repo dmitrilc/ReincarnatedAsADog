@@ -5,10 +5,10 @@ import androidx.room.PrimaryKey
 
 @Entity
 data class Breed(
-    @PrimaryKey(autoGenerate = true) val breedId: Int,
+    @PrimaryKey(autoGenerate = true) val breedId: Int = 0,
     val name: String,
-    val sanguineId: Int,
-    val cholericId: Int,
-    val phlegmaticId: Int,
-    val melancholicId: Int
+    val sanguineId: Int = -1,
+    val cholericId: Int = -1,
+    val phlegmaticId: Int = -1,
+    val melancholicId: Int = -1
 )
