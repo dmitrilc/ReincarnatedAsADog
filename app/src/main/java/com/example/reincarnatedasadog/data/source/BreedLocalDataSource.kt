@@ -1,9 +1,7 @@
 package com.example.reincarnatedasadog.data.source
 
-import com.example.reincarnatedasadog.data.AppDatabase
-import javax.inject.Inject
+import com.example.reincarnatedasadog.data.entity.Breed
 
-class BreedLocalDataSource @Inject constructor(
-    val db: AppDatabase
-) {
+interface BreedLocalDataSource {
+    fun insert(vararg breeds: Breed)
 }
