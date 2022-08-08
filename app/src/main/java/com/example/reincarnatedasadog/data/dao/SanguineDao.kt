@@ -6,6 +6,7 @@ import com.example.reincarnatedasadog.data.entity.Sanguine
 
 @Dao
 interface SanguineDao {
+
     @Insert
-    fun insertAll(vararg sanguines: Sanguine)
+    fun insert(vararg sanguines: Sanguine)
 }

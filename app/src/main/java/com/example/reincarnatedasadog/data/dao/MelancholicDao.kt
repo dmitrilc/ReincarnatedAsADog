@@ -7,5 +7,5 @@ import com.example.reincarnatedasadog.data.entity.Melancholic
 @Dao
 interface MelancholicDao {
     @Insert
-    fun insertAll(vararg melancholics: Melancholic)
+    fun insert(vararg melancholics: Melancholic)
 }

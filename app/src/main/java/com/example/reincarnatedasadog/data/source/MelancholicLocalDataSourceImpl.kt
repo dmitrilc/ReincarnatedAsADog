@@ -8,5 +8,5 @@ class MelancholicLocalDataSourceImpl @Inject constructor(
     private val dao: MelancholicDao
 ) : MelancholicLocalDataSource {
 
-    override fun insertAll(vararg melancholics: Melancholic) = dao.insertAll(*melancholics)
+    override fun insert(vararg melancholics: Melancholic) = dao.insert(*melancholics)
 }

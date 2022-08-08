@@ -8,5 +8,5 @@ import com.example.reincarnatedasadog.data.entity.Phlegmatic
 interface PhlegmaticDao {
 
     @Insert
-    fun insertAll(vararg phlegmatics: Phlegmatic)
+    fun insert(vararg phlegmatics: Phlegmatic)
 }

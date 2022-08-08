@@ -7,5 +7,5 @@ import javax.inject.Inject
 class SanguineLocalDataSourceImpl @Inject constructor(
     private val dao: SanguineDao
 ) : SanguineLocalDataSource {
-    override fun insertAll(vararg sanguines: Sanguine) = dao.insertAll(*sanguines)
+    override fun insert(vararg sanguines: Sanguine) = dao.insert(*sanguines)
 }

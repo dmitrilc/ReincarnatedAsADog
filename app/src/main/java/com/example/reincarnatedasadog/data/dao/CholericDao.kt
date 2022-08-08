@@ -8,5 +8,5 @@ import com.example.reincarnatedasadog.data.entity.Choleric
 interface CholericDao {
 
     @Insert
-    fun insertAll(vararg choleric: Choleric)
+    fun insert(vararg cholerics: Choleric)
 }
