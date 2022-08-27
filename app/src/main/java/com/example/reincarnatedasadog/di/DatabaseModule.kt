@@ -18,6 +18,8 @@ object DatabaseModule {
         Room.databaseBuilder(
             context,
             AppDatabase::class.java, "dog-db"
-        ).build()
+        )
+            .createFromAsset("database/dog-db.db")
+            .build()
 
 }
