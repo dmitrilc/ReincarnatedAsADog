@@ -25,4 +25,20 @@ data class Sanguine(
     @ColumnInfo(name = "is_talkative") val isTalkative: Boolean = false,
     @ColumnInfo(name = "is_outgoing") val isOutgoing: Boolean = false,
     @ColumnInfo(name = "is_sociable") val isSociable: Boolean = false
-)
+) {
+    val truthCount: Int
+        get() {
+            var count = 0
+
+            if (isLeader) count++
+            if (isCarefree) count++
+            if (isLively) count++
+            if (isEasygoing) count++
+            if (isResponsive) count++
+            if (isTalkative) count++
+            if (isOutgoing) count++
+            if (isSociable) count++
+
+            return count
+        }
+}

@@ -25,4 +25,20 @@ data class Melancholic(
     @ColumnInfo(name = "is_rigid") val isRigid: Boolean = false,
     @ColumnInfo(name = "is_anxious") val isAnxious: Boolean = false,
     @ColumnInfo(name = "is_moody") val isMoody: Boolean = false
-)
+){
+    val truthCount: Int
+        get() {
+            var count = 0
+
+            if (isQuiet) count++
+            if (isUnsociable) count++
+            if (isReserved) count++
+            if (isPessimistic) count++
+            if (isSober) count++
+            if (isRigid) count++
+            if (isAnxious) count++
+            if (isMoody) count++
+
+            return count
+        }
+}
