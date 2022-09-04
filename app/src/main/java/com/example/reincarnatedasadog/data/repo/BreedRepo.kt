@@ -1,9 +1,7 @@
 package com.example.reincarnatedasadog.data.repo
 
-import com.example.reincarnatedasadog.data.source.BreedLocalDataSource
-import javax.inject.Inject
+import com.example.reincarnatedasadog.data.entity.BreedAndAllPersonalities
 
-class BreedRepo @Inject constructor(
-    val source: BreedLocalDataSource
-) {
+interface BreedRepo {
+    fun submit(ids: List<Int>): Set<BreedAndAllPersonalities>
 }
