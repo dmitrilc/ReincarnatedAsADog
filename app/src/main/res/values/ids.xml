@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="carefree" type="id"/>
+    <item name="easygoing" type="id" />
+    <item name="leadership" type="id" />
+    <item name="lively" type="id" />
+    <item name="outgoing" type="id" />
+    <item name="responsive" type="id" />
+    <item name="sociable" type="id" />
+    <item name="talkative" type="id" />
+
+    <item name="touchy" type="id" />
+    <item name="active" type="id" />
+    <item name="aggressive" type="id" />
+    <item name="changeable" type="id" />
+    <item name="excitable" type="id" />
+    <item name="impulsive" type="id" />
+    <item name="optimistic" type="id" />
+    <item name="restless" type="id" />
+
+    <item name="calm" type="id" />
+    <item name="even_tempered" type="id" />
+    <item name="reliable" type="id" />
+    <item name="controlled" type="id" />
+    <item name="peaceful" type="id" />
+    <item name="thoughtful" type="id" />
+    <item name="careful" type="id" />
+    <item name="passive" type="id" />
+
+    <item name="quiet" type="id" />
+    <item name="unsociable" type="id" />
+    <item name="reserved" type="id" />
+    <item name="pessimistic" type="id" />
+    <item name="sober" type="id" />
+    <item name="anxious" type="id" />
+    <item name="moody" type="id" />
+    <item name="rigid" type="id" />
+</resources>

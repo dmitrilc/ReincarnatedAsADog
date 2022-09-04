@@ -5,15 +5,19 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.viewModels
+import androidx.fragment.app.activityViewModels
+import androidx.navigation.fragment.findNavController
+import com.example.reincarnatedasadog.R
 import com.example.reincarnatedasadog.databinding.FragmentPersonalityBinding
 import com.example.reincarnatedasadog.ui.viewmodel.PersonalityViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
+private const val TAG = "PERSONALITY_FRAG"
+
 @AndroidEntryPoint
 class PersonalityFragment : Fragment() {
 
-    private val viewModel: PersonalityViewModel by viewModels()
+    private val viewModel: PersonalityViewModel by activityViewModels()
     private var _binding: FragmentPersonalityBinding? = null
     private val binding get() = _binding!!
 
@@ -23,7 +27,15 @@ class PersonalityFragment : Fragment() {
     ): View? {
         _binding = FragmentPersonalityBinding.inflate(inflater)
 
-        viewModel.insert()
+        binding.buttonSubmit.setOnClickListener {
+            val checkedIds = binding.sanguineGroup.checkedChipIds +
+                    binding.cholericGroup.checkedChipIds +
+                    binding.phlegmaticGroup.checkedChipIds +
+                    binding.melancholicGroup.checkedChipIds
+
+            viewModel.submit(checkedIds)
+            findNavController().navigate(R.id.resultsFragment)
+        }
 
         return binding.root
     }

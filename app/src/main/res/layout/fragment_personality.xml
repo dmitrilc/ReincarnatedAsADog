@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
-
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -36,48 +36,56 @@
             app:layout_constraintTop_toBottomOf="@+id/sanguine_group_label">
 
             <com.google.android.material.chip.Chip
+                android:id="@id/carefree"
                 style="@style/Widget.Material3.Chip.Filter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/sanguine_carefree" />
 
             <com.google.android.material.chip.Chip
+                android:id="@id/easygoing"
                 style="@style/Widget.Material3.Chip.Filter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/sanguine_easygoing" />
 
             <com.google.android.material.chip.Chip
+                android:id="@id/leadership"
                 style="@style/Widget.Material3.Chip.Filter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/sanguine_leadership" />
 
             <com.google.android.material.chip.Chip
+                android:id="@id/lively"
                 style="@style/Widget.Material3.Chip.Filter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/sanguine_lively" />
 
             <com.google.android.material.chip.Chip
+                android:id="@id/outgoing"
                 style="@style/Widget.Material3.Chip.Filter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/sanguine_outgoing" />
 
             <com.google.android.material.chip.Chip
+                android:id="@id/responsive"
                 style="@style/Widget.Material3.Chip.Filter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/sanguine_responsive" />
 
             <com.google.android.material.chip.Chip
+                android:id="@id/sociable"
                 style="@style/Widget.Material3.Chip.Filter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/sanguine_sociable" />
 
             <com.google.android.material.chip.Chip
+                android:id="@id/talkative"
                 style="@style/Widget.Material3.Chip.Filter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -122,48 +130,56 @@
             app:layout_constraintTop_toBottomOf="@+id/choleric_group_label">
 
             <com.google.android.material.chip.Chip
+                android:id="@id/touchy"
                 style="@style/Widget.Material3.Chip.Filter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/choleric_touchy" />
 
             <com.google.android.material.chip.Chip
+                android:id="@id/active"
                 style="@style/Widget.Material3.Chip.Filter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/choleric_active" />
 
             <com.google.android.material.chip.Chip
+                android:id="@id/aggressive"
                 style="@style/Widget.Material3.Chip.Filter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/choleric_aggressive" />
 
             <com.google.android.material.chip.Chip
+                android:id="@id/changeable"
                 style="@style/Widget.Material3.Chip.Filter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/choleric_changeable" />
 
             <com.google.android.material.chip.Chip
+                android:id="@id/excitable"
                 style="@style/Widget.Material3.Chip.Filter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/choleric_excitable" />
 
             <com.google.android.material.chip.Chip
+                android:id="@id/impulsive"
                 style="@style/Widget.Material3.Chip.Filter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/choleric_impulsive" />
 
             <com.google.android.material.chip.Chip
+                android:id="@id/optimistic"
                 style="@style/Widget.Material3.Chip.Filter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/choleric_optimistic" />
 
             <com.google.android.material.chip.Chip
+                android:id="@id/restless"
                 style="@style/Widget.Material3.Chip.Filter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -209,48 +225,56 @@
             app:layout_constraintTop_toBottomOf="@+id/phlegmatic_group_label">
 
             <com.google.android.material.chip.Chip
+                android:id="@id/calm"
                 style="@style/Widget.Material3.Chip.Filter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/phlegmatic_calm" />
 
             <com.google.android.material.chip.Chip
+                android:id="@id/even_tempered"
                 style="@style/Widget.Material3.Chip.Filter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/phlegmatic_even_tempered" />
 
             <com.google.android.material.chip.Chip
+                android:id="@id/reliable"
                 style="@style/Widget.Material3.Chip.Filter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/phlegmatic_reliable" />
 
             <com.google.android.material.chip.Chip
+                android:id="@id/controlled"
                 style="@style/Widget.Material3.Chip.Filter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/phlegmatic_controlled" />
 
             <com.google.android.material.chip.Chip
+                android:id="@id/peaceful"
                 style="@style/Widget.Material3.Chip.Filter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/phlegmatic_peaceful" />
 
             <com.google.android.material.chip.Chip
+                android:id="@id/thoughtful"
                 style="@style/Widget.Material3.Chip.Filter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/phlegmatic_thoughtful" />
 
             <com.google.android.material.chip.Chip
+                android:id="@id/careful"
                 style="@style/Widget.Material3.Chip.Filter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/phlegmatic_careful" />
 
             <com.google.android.material.chip.Chip
+                android:id="@id/passive"
                 style="@style/Widget.Material3.Chip.Filter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -289,61 +313,76 @@
             android:id="@+id/melancholic_group"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/melancholic_group_label">
 
             <com.google.android.material.chip.Chip
+                android:id="@id/quiet"
                 style="@style/Widget.Material3.Chip.Filter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/melancholic_quiet" />
 
             <com.google.android.material.chip.Chip
+                android:id="@id/unsociable"
                 style="@style/Widget.Material3.Chip.Filter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/melancholic_Unsociable" />
 
             <com.google.android.material.chip.Chip
+                android:id="@id/reserved"
                 style="@style/Widget.Material3.Chip.Filter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/melancholic_reserved" />
 
             <com.google.android.material.chip.Chip
+                android:id="@id/pessimistic"
                 style="@style/Widget.Material3.Chip.Filter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/melancholic_pessimistic" />
 
             <com.google.android.material.chip.Chip
+                android:id="@id/sober"
                 style="@style/Widget.Material3.Chip.Filter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/melancholic_sober" />
 
             <com.google.android.material.chip.Chip
+                android:id="@id/rigid"
                 style="@style/Widget.Material3.Chip.Filter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/melancholic_rigid" />
 
             <com.google.android.material.chip.Chip
+                android:id="@id/anxious"
                 style="@style/Widget.Material3.Chip.Filter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/melancholic_anxious" />
 
             <com.google.android.material.chip.Chip
+                android:id="@id/moody"
                 style="@style/Widget.Material3.Chip.Filter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/melancholic_moody" />
 
         </com.google.android.material.chip.ChipGroup>
+
+        <Button
+            android:id="@+id/button_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/melancholic_group"
+            android:text="@string/button_submit" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

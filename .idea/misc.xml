@@ -6,6 +6,8 @@
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.31521739130434784" />
         <entry key="app/src/main/res/layout/chip.xml" value="0.2821557971014493" />
         <entry key="app/src/main/res/layout/fragment_personality.xml" value="0.21829710144927536" />
+        <entry key="app/src/main/res/layout/fragment_results.xml" value="0.21920289855072464" />
+        <entry key="app/src/main/res/layout/result_viewholder.xml" value="0.23097826086956522" />
       </map>
     </option>
   </component>

@@ -9,5 +9,13 @@
         android:id="@+id/personalityFragment"
         android:name="com.example.reincarnatedasadog.ui.fragment.PersonalityFragment"
         tools:layout="@layout/fragment_personality"
-        android:label="PersonalityFragment" />
+        android:label="PersonalityFragment" >
+        <action
+            android:id="@+id/action_personalityFragment_to_resultsFragment"
+            app:destination="@id/resultsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultsFragment"
+        android:name="com.example.reincarnatedasadog.ui.fragment.ResultsFragment"
+        android:label="ResultsFragment" />
 </navigation>
