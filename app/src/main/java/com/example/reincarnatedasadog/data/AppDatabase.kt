@@ -2,7 +2,7 @@ package com.example.reincarnatedasadog.data
 
 import androidx.room.Database
 import androidx.room.RoomDatabase
-import com.example.reincarnatedasadog.data.dao.*
+import com.example.reincarnatedasadog.data.dao.BreedDao
 import com.example.reincarnatedasadog.data.entity.*
 
 @Database(
@@ -16,8 +16,4 @@ import com.example.reincarnatedasadog.data.entity.*
 )
 abstract class AppDatabase : RoomDatabase() {
     abstract fun breedDao(): BreedDao
-    abstract fun sanguineDao(): SanguineDao
-    abstract fun cholericDao(): CholericDao
-    abstract fun phlegmaticDao(): PhlegmaticDao
-    abstract fun melancholicDao(): MelancholicDao
 }
