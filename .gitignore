@@ -14,3 +14,5 @@
 .cxx
 local.properties
 /.~lock.personality.ods#
+/app/src/main/assets/database/dog-db.db-shm
+/app/src/main/assets/database/dog-db.db-wal
