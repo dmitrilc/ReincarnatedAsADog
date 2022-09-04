@@ -1,12 +1,13 @@
 package com.example.reincarnatedasadog.data.entity
 
+import androidx.room.Embedded
 import androidx.room.Relation
 
 data class BreedAndSanguine(
-    val sanguine: Sanguine,
+    @Embedded val breed: Breed,
     @Relation(
-        parentColumn = "sanguineId",
-        entityColumn = "breedId"
+        parentColumn = "id",
+        entityColumn = "id"
     )
-    val breed: Breed
+    val sanguine: Sanguine?
 )
