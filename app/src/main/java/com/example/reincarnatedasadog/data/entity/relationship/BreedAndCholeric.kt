@@ -1,7 +1,9 @@
-package com.example.reincarnatedasadog.data.entity
+package com.example.reincarnatedasadog.data.entity.relationship
 
 import androidx.room.Embedded
 import androidx.room.Relation
+import com.example.reincarnatedasadog.data.entity.Breed
+import com.example.reincarnatedasadog.data.entity.Choleric
 
 data class BreedAndCholeric(
     @Embedded val breed: Breed,

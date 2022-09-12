@@ -1,4 +1,4 @@
-package com.example.reincarnatedasadog.di
+package com.example.reincarnatedasadog.di.db
 
 import android.content.Context
 import androidx.room.Room

@@ -1,9 +1,10 @@
-package com.example.reincarnatedasadog.data.entity
+package com.example.reincarnatedasadog.data.entity.relationship
 
-import androidx.room.Embedded
+import com.example.reincarnatedasadog.data.entity.*
 
 data class BreedAndAllPersonalities(
-    @Embedded val breed: Breed,
+    val breed: Breed,
+    val breedImageUri: String? = null,
     val sanguine: Sanguine? = null,
     val choleric: Choleric? = null,
     val phlegmatic: Phlegmatic? = null,
