@@ -7,6 +7,15 @@
 
     </data>
 
+    <com.google.android.material.card.MaterialCardView
+        style="Widget.Material3.CardView.Outlined"
+        android:id="@+id/card_result_viewHolder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+
+        >
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -15,6 +24,7 @@
             android:id="@+id/imageView_dog_image"
             android:layout_width="100dp"
             android:layout_height="100dp"
+            android:layout_margin="8dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -25,6 +35,8 @@
             android:id="@+id/textView_result_viewHolder"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textSize="18sp"
+
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/imageView_dog_image"
             app:layout_constraintTop_toTopOf="parent"
@@ -35,10 +47,13 @@
             android:id="@+id/textView_percentage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+
             tools:text="Chance: 50%"
+            android:textSize="14sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/imageView_dog_image"
             app:layout_constraintTop_toBottomOf="@id/textView_result_viewHolder" />
     </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
 </layout>
