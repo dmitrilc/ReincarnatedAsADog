@@ -1,15 +1,19 @@
 package com.example.reincarnatedasadog.data.dao
 
 import androidx.room.Dao
+import androidx.room.Insert
 import androidx.room.Query
 import androidx.room.Transaction
-import com.example.reincarnatedasadog.data.entity.BreedAndCholeric
-import com.example.reincarnatedasadog.data.entity.BreedAndMelancholic
-import com.example.reincarnatedasadog.data.entity.BreedAndPhlegmatic
-import com.example.reincarnatedasadog.data.entity.BreedAndSanguine
+import com.example.reincarnatedasadog.data.entity.*
+import com.example.reincarnatedasadog.data.entity.relationship.BreedAndCholeric
+import com.example.reincarnatedasadog.data.entity.relationship.BreedAndMelancholic
+import com.example.reincarnatedasadog.data.entity.relationship.BreedAndPhlegmatic
+import com.example.reincarnatedasadog.data.entity.relationship.BreedAndSanguine
 
 @Dao
 interface BreedDao {
+    @Insert
+    fun insert(vararg breed: Breed)
 
     @Transaction
     @Query(
