@@ -6,13 +6,6 @@ import androidx.room.PrimaryKey
 @Entity(tableName = "breed")
 data class Breed(
     @PrimaryKey(autoGenerate = true) val id: Int = 0,
-    val name: String,
-/*    @Embedded(prefix = "sanguine") val sanguine: Sanguine?,
-    @Embedded(prefix = "choleric") val choleric: Choleric?,
-    @Embedded(prefix = "phlegmatic") val phlegmatic: Phlegmatic?,
-    @Embedded(prefix = "melancholic") val melancholic: Melancholic?*/
-/*    val sanguineId: Int = -1,
-    val cholericId: Int = -1,
-    val phlegmaticId: Int = -1,
-    val melancholicId: Int = -1*/
+    val parent: String,
+    val sub: String? = null
 )
