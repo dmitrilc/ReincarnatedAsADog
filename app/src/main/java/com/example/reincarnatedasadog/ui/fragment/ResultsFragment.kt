@@ -6,9 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
-import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
-import androidx.lifecycle.repeatOnLifecycle
 import com.example.reincarnatedasadog.databinding.FragmentResultsBinding
 import com.example.reincarnatedasadog.ui.viewmodel.PersonalityViewModel
 import kotlinx.coroutines.launch
@@ -23,16 +21,15 @@ class ResultsFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         _binding = FragmentResultsBinding.inflate(inflater)
 
+        binding.recyclerResults.adapter = ResultsAdapter()
+
         lifecycleScope.launch {
-            repeatOnLifecycle(Lifecycle.State.STARTED) {
-                viewModel.uiState.collect { uiState ->
-                    if (uiState.isNotEmpty()){
-                        binding.recyclerResults.adapter = ResultsAdapter(uiState)
-                    }
-                }
+            viewModel.uiState.collect { uiState ->
+                (binding.recyclerResults.adapter as ResultsAdapter)
+                    .submitList(uiState)
             }
         }
 
