@@ -26,7 +26,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/imageView"
+            app:layout_constraintStart_toEndOf="@id/imageView_dog_image"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toTopOf="@id/textView_percentage"
             tools:text="Bull Dog" />
@@ -38,7 +38,7 @@
             tools:text="Chance: 50%"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/imageView"
-            app:layout_constraintTop_toBottomOf="@+id/textView_result_viewHolder" />
+            app:layout_constraintStart_toEndOf="@id/imageView_dog_image"
+            app:layout_constraintTop_toBottomOf="@id/textView_result_viewHolder" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
