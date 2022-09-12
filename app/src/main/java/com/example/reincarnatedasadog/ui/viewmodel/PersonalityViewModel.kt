@@ -2,6 +2,7 @@ package com.example.reincarnatedasadog.ui.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.example.reincarnatedasadog.data.entity.Breed
 import com.example.reincarnatedasadog.data.repo.BreedRepo
 import com.example.reincarnatedasadog.ui.state.ResultUiState
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -22,14 +23,31 @@ class PersonalityViewModel @Inject constructor(
     private val _uiState = MutableStateFlow(emptyList<ResultUiState>())
     val uiState: StateFlow<List<ResultUiState>> = _uiState
 
+    private val imageUriCallback: (Breed)->Unit = {
+        updateImageUri(it)
+    }
+
+    private fun updateImageUri(breed: Breed) {
+        viewModelScope.launch(Dispatchers.IO){
+            repo.getImageUri(breed)?.let { uri ->
+                _uiState.value = _uiState.value.map {
+                    if (it.breed.id == breed.id){
+                        it.copy(imageUri = uri)
+                    } else {
+                        it
+                    }
+                }
+            }
+        }
+    }
+
     fun submit(checkedIds: List<Int>){
         viewModelScope.launch(Dispatchers.IO) {
             val sortedList = repo.submit(checkedIds)
+            val ratioFormat = NumberFormat.getPercentInstance()
+            val checkedCount = checkedIds.count()
 
             _uiState.value = sortedList.map {
-
-                val checkedCount = checkedIds.count()
-
                 val diff = if (checkedCount >= it.totalTruthCount){
                     checkedCount - it.totalTruthCount
                 } else {
@@ -42,11 +60,17 @@ class PersonalityViewModel @Inject constructor(
                     (0.9F - Random.nextDouble(0.05, 0.15)) / diff
                 }
 
-                val ratioFormat = NumberFormat.getPercentInstance()
+                val displayName = if (it.breed.sub.isNullOrEmpty()){
+                    it.breed.parent.titleCase()
+                } else {
+                    "${it.breed.parent.titleCase()} ${it.breed.sub.titleCase()}"
+                }
 
                 ResultUiState(
-                    it.breed.name,
-                    ratioFormat.format(ratio)
+                    breed = it.breed,
+                    displayName = displayName,
+                    ratio = ratioFormat.format(ratio),
+                    imageUriCallback = imageUriCallback
                 )
             }.sortedBy {
                 it.ratio
@@ -54,4 +78,13 @@ class PersonalityViewModel @Inject constructor(
         }
     }
 
+    //Use for generating schema only
+    fun getAllBreeds(){
+        viewModelScope.launch(Dispatchers.IO) {
+            //repo.prepopulateBreedsTable()
+        }
+    }
+
 }
+
+fun String.titleCase() = this.replaceFirst(this[0], this[0].titlecaseChar())

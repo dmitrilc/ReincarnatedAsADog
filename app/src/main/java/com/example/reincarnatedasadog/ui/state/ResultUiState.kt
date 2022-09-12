@@ -1,9 +1,11 @@
 package com.example.reincarnatedasadog.ui.state
 
-import android.graphics.drawable.Drawable
+import com.example.reincarnatedasadog.data.entity.Breed
 
 data class ResultUiState(
-    val breedName: String,
+    val breed: Breed,
     val ratio: String,
-    val image: Drawable? = null
+    val displayName: String,
+    val imageUri: String? = null,
+    val imageUriCallback: (Breed)->Unit
 )
