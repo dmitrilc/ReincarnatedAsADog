@@ -4,7 +4,7 @@ import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
 import androidx.room.Transaction
-import com.example.reincarnatedasadog.data.entity.*
+import com.example.reincarnatedasadog.data.entity.Breed
 import com.example.reincarnatedasadog.data.entity.relationship.BreedAndCholeric
 import com.example.reincarnatedasadog.data.entity.relationship.BreedAndMelancholic
 import com.example.reincarnatedasadog.data.entity.relationship.BreedAndPhlegmatic

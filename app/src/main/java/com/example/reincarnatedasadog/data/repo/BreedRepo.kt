@@ -23,7 +23,6 @@ class BreedRepoImpl @Inject constructor(
 ): BreedRepo {
 
     override suspend fun submit(ids: List<Int>): Set<BreedAndAllPersonalities> {
-        //TODO do 4 queries in one db trip
         val sanguine = Sanguine(
             isCarefree = R.id.carefree in ids,
             isLeader = R.id.leadership in ids,
@@ -143,7 +142,7 @@ class BreedRepoImpl @Inject constructor(
         }
     }
 
-    //TODO Used for generating initial breed table only
+    // Used for generating initial breed table only
     override suspend fun prepopulateBreedsTable(){
         val res = httpService.getAllBreeds()
         val allBreeds = mutableListOf<Breed>()
